@@ -1,9 +1,19 @@
 import * as React from 'react';
 import { Component } from 'react';
+import axios from "axios"
+import MovieSinglePage from "../MovieSinglePage"
+import { Link } from "react-router-dom"
+
 
 
 
 class Movie extends Component<any, any> {
+    constructor(props: any) {
+        super(props)
+        this.state = {
+            Movie: {}
+        }
+    }
     render() {
         const divStyle = {
             width: "18rem",
@@ -12,7 +22,6 @@ class Movie extends Component<any, any> {
             margin: "5px"
         }
         const { Poster, Title, Type, Year, imdbID } = this.props.Movie
-        const { GetMoreInfo } = this.props
 
         return (
             <div className="card" style={divStyle}>
@@ -26,12 +35,13 @@ class Movie extends Component<any, any> {
                     <li className="list-group-item">{`ID: ${imdbID}`}</li>
                 </ul>
                 <div className="card-body">
-                    <a href={`/${Title}`}  className="card-link">More Info</a>
+                    <span> <Link to={`/movie/${imdbID}`}>Get More Info</Link> </span>
                 </div>
             </div>
 
         );
     }
+    
 }
 
 export default Movie;;

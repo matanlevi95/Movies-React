@@ -1,7 +1,5 @@
 import * as React from 'react';
 import { Component } from 'react';
-import axios from "axios"
-import MovieSinglePage from "../MovieSinglePage"
 import { Link } from "react-router-dom"
 
 
@@ -35,7 +33,8 @@ class Movie extends Component<any, any> {
                     <li className="list-group-item">{`ID: ${imdbID}`}</li>
                 </ul>
                 <div className="card-body">
-                    <span> <Link to={`/movie/${imdbID}`}>Get More Info</Link> </span>
+                    <button> <Link to={`/movie/${imdbID}`}>Get More Info</Link> </button>
+                    <button> <Link to={`/feedback/${Title}`}>Write Feedback</Link> </button>
                 </div>
             </div>
 

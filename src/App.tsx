@@ -6,21 +6,23 @@ import Navbar from "./components/Navbar"
 import { BrowserRouter, Route, Switch } from 'react-router-dom'
 import Home from './components/Home';
 import MovieSinglePage from "./components/MovieSinglePage"
+import Feedback from "./components/feedback"
 
 class App extends Component<any, any> {
 
   render() {
     return (
+          <div className="App">
       <BrowserRouter>
-        <div className="App">
           <Navbar />
           <Switch>
-            <Route path="/home" component={Home} />
+            <Route exact path="/" component={Home} />
             <Route path="/search" component={MoviesPage} />
-            <Route path="/movie/:imdbID" component={MovieSinglePage} />
+            <Route path="/movie/:id" component={MovieSinglePage} />
+            <Route path="/feedback/:Title" component={Feedback} />
           </Switch>
-        </div>
       </BrowserRouter>
+        </div>
     );
   }
 }

@@ -8,8 +8,8 @@ class MovieSinglePage extends Component<any, any> {
     }
 
     componentDidMount() {
-        const { imdbID } = this.props.match.params
-        axios.get(`http://www.omdbapi.com/?i=${imdbID}&apikey=a503617b`).then(res => {
+        const { id } = this.props.match.params
+        axios.get(`http://www.omdbapi.com/?i=${id}&apikey=a503617b`).then(res => {
             this.setState({
                 Movie: res.data
             })

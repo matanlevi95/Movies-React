@@ -6,7 +6,8 @@ import Navbar from "./components/Navbar"
 import { BrowserRouter, Route, Switch } from 'react-router-dom'
 import Home from './components/Home';
 import MovieSinglePage from "./components/MovieSinglePage"
-import Feedback from "./components/feedback"
+import Feedback from "./components/feedbackmovie"
+import AllFeedbacks from "./components/allFeedbacks"
 
 class App extends Component<any, any> {
 
@@ -20,6 +21,7 @@ class App extends Component<any, any> {
             <Route path="/search" component={MoviesPage} />
             <Route path="/movie/:id" component={MovieSinglePage} />
             <Route path="/feedback/:Title" component={Feedback} />
+            <Route path="/allFeedbacks" component={AllFeedbacks} />
           </Switch>
       </BrowserRouter>
         </div>

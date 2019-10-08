@@ -1,27 +1,20 @@
 import Actions from "./actions.config";
 
 const initialState = {
-    feedback: ""
+    feedbackArray: [],
 }
 
-export default function root(state = initialState, action: any) {
+export function root(state = initialState, action: any) {
     switch (action.type) {
         case Actions.SET_FEEDBACK: {
-
-            // return equals to global set state - setting the store
+            const { feedbackArray } = state
+            const { title, feedback } = action.payload
+            console.log(feedbackArray);
+            
             return {
                 ...state,
-                feedback: + action.payload.feedback
+                feedbackArray: [...feedbackArray, { title, feedback }]
             }
-
-        }
-        case Actions.ANOTHER_KEY: {
-            // some logic
-            return {
-                ...state,
-                countries: ["ISR", "AFG"]
-            }
-
         }
         default: {
             return state;

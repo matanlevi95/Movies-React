@@ -1,5 +1,6 @@
 import * as React from 'react';
 import { Component } from 'react';
+import { Link } from "react-router-dom"
 
 class Navbar extends Component<any, any> {
     state = {}
@@ -15,10 +16,13 @@ class Navbar extends Component<any, any> {
                     <div className="collapse navbar-collapse" id="navbarSupportedContent">
                         <ul className="navbar-nav mr-auto">
                             <li className="nav-item">
-                                <a className="nav-link" href="/">Home</a>
+                            <button className="btn btn-dark"><Link style={{color:"white"}} to="/">Home</Link></button>
                             </li>
                             <li className="nav-item">
-                                <a className="nav-link" href="/search">Search</a>
+                            <button className="btn btn-dark"><Link style={{color:"white"}} to="/search">Search</Link></button>
+                            </li>
+                            <li className="nav-item">
+                                <button className="btn btn-dark" ><Link style={{color:"white"}} to="/allFeedbacks">Feedbacks</Link></button>
                             </li>
                         </ul>
                     </div>

@@ -23,7 +23,7 @@ class MovieSinglePage extends Component<any, any> {
     render() {
         const { Movie } = this.state
         if (!Movie) return <h1>Loading...</h1>
-        return (<span>{JSON.stringify(this.state.Movie)} </span>)
+        return (<span>{JSON.stringify(Movie)} </span>)
     }
 
 

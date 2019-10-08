@@ -1,7 +1,6 @@
 import * as React from 'react';
 import { Component } from 'react';
 import Movie from "../Movie"
-import axios from "axios"
 
 
 

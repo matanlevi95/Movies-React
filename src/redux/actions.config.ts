@@ -1,4 +1,3 @@
 export default {
     SET_FEEDBACK: "SET_FEEDBACK",
-    ANOTHER_KEY: "ANOTHER_VALUE"
 }
